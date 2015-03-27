@@ -1,0 +1,6 @@
+var sentence = "One day I went to school";
+
+//split the sentence into a list of words
+var words = sentence.split(' ');
+console.log(words);
+

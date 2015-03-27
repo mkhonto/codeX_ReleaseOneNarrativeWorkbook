@@ -10,3 +10,16 @@ var users = [];
 //you can use the forEach method
 
 //Hi, first_name last_name!
+
+ //users.push({ first_name : 'Andy', last_name : 'Bradshaw' });
+
+ users.push({ first_name : 'Jack', last_name : 'Bradshaw' });
+
+ users.push({ first_name : 'Callum', last_name : 'Bradshaw' });
+
+ users.push({ first_name : 'Neil', last_name : 'Bradshaw' });
+
+for (var i = 0; i < users.length; i++){
+console.log('Hi, ' + users[i].first_name + ' ' + users[i].last_name + '!' );
+};
+

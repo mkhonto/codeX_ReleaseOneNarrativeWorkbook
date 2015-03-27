@@ -1,0 +1,81 @@
+// var finder = require('findit').find(__dirname);
+
+//This listens for directories found
+//finder.on('directory', function (dir) {
+  //console.log('Directory: ' + dir + '/');
+//});
+
+//This listens for files found
+//finder.on('file', function (file) {
+  //console.log('File: ' + file);
+//});
+
+
+//fs = require('fs');
+
+//fs.readdir(process.cwd(), function (err, files ) {
+  //if (err) {
+   //console.log(err);
+ //   return;
+ // }
+ // console.log(files);
+//});
+
+var filesInLines = function(foldpath){
+ var fs = require("fs");
+ var lines =[];
+ 
+ var files =fs.readdirync(folderpath);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
