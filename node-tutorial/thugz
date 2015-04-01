@@ -1,0 +1,8 @@
+var fs = require("fs");
+ var location = fs.readdirSync('./Rap music/');
+ console.log(location);
+
+ location.forEach(function(files){
+ var readfiles = fs.readFileSync("./Rap music/"+ files, 'utf8');
+ console.log(readfiles.split('\n').length);
+ });

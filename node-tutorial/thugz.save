@@ -1,0 +1,3 @@
+var fs = require("fs");
+ var location = fs.readdirSync('./Rap music/');
+ console.log(locati

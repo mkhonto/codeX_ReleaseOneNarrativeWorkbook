@@ -1,81 +1,29 @@
-// var finder = require('findit').find(__dirname);
+var fs = require('fs');
 
-//This listens for directories found
-//finder.on('directory', function (dir) {
-  //console.log('Directory: ' + dir + '/');
-//});
+var linesInFiles = function(folderName){
 
-//This listens for files found
-//finder.on('file', function (file) {
-  //console.log('File: ' + file);
-//});
+  var week1 = fs.readdirSync(folderName);
 
+  var linesInFiles = [];
 
-//fs = require('fs');
+week1.forEach(function(menu){
+  var content = fs.readFileSync('./files/week1/'+ menu , 'utf8');
+  
+  var lines = content.split('\n');
+  for(var i = 0; i < lines.length; i++){
+    linesInFiles.push(lines[i]);
+  }
+});
 
-//fs.readdir(process.cwd(), function (err, files ) {
-  //if (err) {
-   //console.log(err);
- //   return;
- // }
- // console.log(files);
-//});
+console.log(linesInFiles);
+return linesInFiles;
+}
 
-var filesInLines = function(foldpath){
- var fs = require("fs");
- var lines =[];
- 
- var files =fs.readdirSync(folderpath);
+exports.linesInFiles = function(folderName) {
+  return linesInFiles(folderName);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+exports.linesInFilesAsync = function(folderName, callback) {
+  var lines =linesInFiles(folderName);
+  callback(null, lines);
+}
